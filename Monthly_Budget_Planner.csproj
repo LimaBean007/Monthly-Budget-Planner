@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\Logos\strong_box_money.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Arrow.png" />
+    <None Remove="coolicon.png" />
+    <None Remove="Forms\Print.png" />
+    <None Remove="Forms\Save.png" />
+    <None Remove="Group 1.png" />
+    <None Remove="No.png" />
+    <None Remove="Renting.png" />
+    <None Remove="Renting_1.png" />
+    <None Remove="thin_big_left.png" />
+    <None Remove="Yes.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Arrow.png" />
+    <Resource Include="coolicon.png" />
+    <Resource Include="Forms\Print.png" />
+    <Resource Include="Forms\Save.png" />
+    <Resource Include="Group 1.png" />
+    <Resource Include="No.png" />
+    <Resource Include="Renting.png" />
+    <Resource Include="Renting_1.png" />
+    <Resource Include="thin_big_left.png" />
+    <Resource Include="Yes.png" />
+  </ItemGroup>
+
+</Project>

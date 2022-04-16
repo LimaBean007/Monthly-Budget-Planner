@@ -1,0 +1,44 @@
+﻿<Window x:Class="Monthly_Budget_Planner.frmSavingOption"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Monthly_Budget_Planner"
+        mc:Ignorable="d"
+        Title="Monthly Budget Planner" Height="710" Width="630" Closing="Window_Closing" ResizeMode="CanMinimize">
+    <Grid d:IsLocked="True">
+        <Label x:Name="lblHeader" Content="        Savings Account" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" Background="#FF4EB0DA" Height="70" Width="630" FontSize="35"/>
+        <Rectangle x:Name="rectArrow" HorizontalAlignment="Left" Height="58" Stroke="#FF4EB0DA" VerticalAlignment="Top" Width="48" Margin="10,6,0,0" Cursor="Hand" MouseLeftButtonDown="rectArrow_MouseLeftButtonDown" ToolTip="Back">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Arrow.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name ="Renting" Margin="156,200,156,345" Cursor="">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="rectYes" HorizontalAlignment="Center" Height="57" Margin="0,239,0,0" Stroke="Black" VerticalAlignment="Top" Width="222" Opacity="0" Cursor="Hand" MouseLeftButtonDown="rectYes_MouseLeftButtonDown" ToolTip="Yes">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Yes.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name ="Renting_Copy" Margin="155,417,157,128" Cursor="">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="rectNo" HorizontalAlignment="Center" Height="58" Margin="0,456,0,0" Stroke="Black" VerticalAlignment="Top" Width="222" Cursor="Hand" Opacity="0" MouseLeftButtonDown="rectNo_MouseLeftButtonDown" ToolTip="No">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/No.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Label x:Name="lblAccomodation" Content="Do you want to apply for a Savings Account" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" FontWeight="Normal" Background="#00000000" Foreground="#FF4EB0DA" FontSize="30"/>
+        <Rectangle x:Name ="OrDivider" Margin="-1,355,1,292" Cursor="Arrow">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Group 1.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+    </Grid>
+</Window>

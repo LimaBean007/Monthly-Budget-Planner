@@ -1,0 +1,32 @@
+﻿<Window x:Class="Monthly_Budget_Planner.frmViewReport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Monthly_Budget_Planner"
+        mc:Ignorable="d"
+        Title="Monthly Budget Planner" Height="710" Width="630" Closing="Window_Closing" ResizeMode="CanMinimize">
+    <Grid d:IsLocked="True" >
+        <Label x:Name="lblSubmitNew_Copy" Cursor="Hand" Content="_____________________________________________________________" 
+            HorizontalAlignment="Left" Margin="29,519,0,0" 
+            VerticalAlignment="Top" FontSize="17" Foreground="#FF4EB0DA" 
+            MouseLeftButtonDown="lblSubmitNew_MouseLeftButtonDown" Width="209" Grid.ColumnSpan="2"/>
+
+        <Label x:Name="lblHeader" Content="        Income &amp; Expense Report" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Background="#FF4EB0DA" Height="70" Width="630" FontSize="35" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblSubmitNew" Content="Submit Another Response?" 
+               HorizontalAlignment="Left" Margin="29,519,0,0" 
+               VerticalAlignment="Top" FontSize="17" Foreground="#FF4EB0DA" 
+               MouseLeftButtonDown="lblSubmitNew_MouseLeftButtonDown" Cursor="Hand" Grid.ColumnSpan="2" ToolTip="Submit another response?"/>
+        <TextBox x:Name="txbOutput" HorizontalAlignment="Left" Margin="29,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="429" Height="415" IsReadOnlyCaretVisible="True" IsReadOnly="True" BorderBrush="#FF4EB0DA" VerticalScrollBarVisibility="Auto"/>
+        <Rectangle x:Name="rectSave" HorizontalAlignment="Left" Height="32"  VerticalAlignment="Top" Width="38" Margin="420,520,0,0" Cursor="Hand" MouseLeftButtonDown="rectArrow_MouseLeftButtonDown" ToolTip="Save File">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Forms/Save.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="rectPrint" HorizontalAlignment="Left" Height="41"  VerticalAlignment="Top" Width="48" Margin="360,515,0,0" Cursor="Hand" MouseLeftButtonDown="rectPrint_MouseLeftButtonDown" ToolTip="Print Report">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Forms/Print.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="Monthly_Budget_Planner.FrmVehicleDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Monthly_Budget_Planner"
+        mc:Ignorable="d"
+        Title="Monthly Budget Planner" Height="710" Width="630" Closing="Window_Closing" ResizeMode="CanMinimize">
+    <Grid d:IsLocked="True">
+        <Label x:Name="lblHeader" Content="        Vehicle Details" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Background="#FF4EB0DA" Height="70" Width="800" FontSize="35" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblMakeModel"  Content="Enter model and make of the vehicle" HorizontalAlignment="Left" Margin="12,119,0,0" VerticalAlignment="Top" Background="White" FontSize="17"/>
+        <TextBox x:Name="txbMakeModel" MaxLength="13" HorizontalAlignment="Left" Margin="425,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" RenderTransformOrigin="0.483,1.634" Cursor="IBeam" FontSize="17" TextChanged="txbMakeModel_TextChanged" TabIndex="0" ToolTip="Make and Model" KeyDown="txbMakeModel_KeyDown"/>
+        <Label x:Name="lblPurchasePrice" Content="Enter purchase price of the vehicle" HorizontalAlignment="Left" Margin="12,160,0,0" VerticalAlignment="Top" FontSize="17"/>
+        <Label x:Name="lblVehDep" Content="Enter vehicle deposit" HorizontalAlignment="Left" Margin="12,201,0,0" VerticalAlignment="Top" FontSize="17"/>
+        <Label x:Name="lblIntRate" Content="Enter interest rate (%)" HorizontalAlignment="Left" Margin="12,242,0,0" VerticalAlignment="Top" FontSize="17"/>
+        <TextBox x:Name="txbVehDep" MaxLength="13" HorizontalAlignment="Left" Margin="425,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" FontSize="17" TextChanged="txbVehDep_TextChanged" TabIndex="2" ToolTip="Deposit" KeyDown="txbVehDep_KeyDown"/>
+        <TextBox x:Name="txbPurchasePrice" MaxLength="13" HorizontalAlignment="Left" Margin="425,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" FontSize="17" TextChanged="txbPurchasePrice_TextChanged" TabIndex="1" ToolTip="Purchase Price" KeyDown="txbPurchasePrice_KeyDown"/>
+        <TextBox x:Name="txbIntRate" MaxLength="13" HorizontalAlignment="Left" Margin="426,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" FontSize="17" TextChanged="txbIntRate_TextChanged" TabIndex="3" ToolTip="Interest Rate"/>
+        <Label x:Name="lblIntRate_Copy" Content="Enter estimated insurace premium" HorizontalAlignment="Left" Margin="11,283,0,0" VerticalAlignment="Top" FontSize="17"/>
+        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="473,612,0,0" VerticalAlignment="Top" Height="46" Width="123" Click="Button_Click" Cursor="Hand" Background="White" BorderBrush="#FF4EB0DA" Foreground="#FF4EB0DA" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TabIndex="5" ToolTip="Next"/>
+        <Rectangle x:Name="rectArrow" HorizontalAlignment="Left" Height="58" Stroke="#FF4EB0DA" VerticalAlignment="Top" Width="48" Margin="10,6,0,0" Cursor="Hand" MouseLeftButtonDown="RectArrow_MouseLeftButtonDown" ToolTip="Back">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Arrow.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="lblMakeError" Content="*" HorizontalAlignment="Left" Margin="589,94,0,0" VerticalAlignment="Top" FontSize="35" Visibility="Hidden"/>
+        <Label x:Name="lblPriceError" Content="*" HorizontalAlignment="Left" Margin="589,135,0,0" VerticalAlignment="Top" FontSize="35" Visibility="Hidden"/>
+        <Label x:Name="lblDepError" Content="*" HorizontalAlignment="Left" Margin="589,176,0,0" VerticalAlignment="Top" FontSize="35" Visibility="Hidden"/>
+        <Label x:Name="lblIntError" Content="*" HorizontalAlignment="Left" Margin="589,217,0,0" VerticalAlignment="Top" FontSize="35" Visibility="Hidden"/>
+        <Label x:Name="lblInsurError" Content="*" HorizontalAlignment="Left" Margin="589,258,0,0" VerticalAlignment="Top" FontSize="35" Visibility="Hidden"/>
+        <TextBox x:Name="txbInsurance" MaxLength="13" HorizontalAlignment="Left" Margin="426,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" FontSize="17" TextChanged="txbIntRate_TextChanged" TabIndex="4" ToolTip="Insurance premium" KeyDown="txbInsurance_KeyDown"/>
+    </Grid>
+</Window>
